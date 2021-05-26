@@ -1,0 +1,127 @@
+/* Default Reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Document Body  */
+body{
+    background-color: limegreen;
+    min-height: 100vh;
+    font-family: cursive;
+}
+/* Heading  */
+h1{
+    text-align: center;
+    font-size: 6vw;
+    position: relative;
+    color: blue;
+    text-shadow: 0px 0px 10px white , 0px 0px 15px red;
+    margin-bottom: 4rem;
+}
+/* Main Container  */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message{
+    transition:  all 0.5s ease;
+}
+.win{
+    font-size: 5rem;
+    margin-top: 5rem;
+    color: #fff;
+    animation: glow 2s linear;
+    animation-iteration-count: infinite;
+}
+.btn{
+    display: none;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    padding: 1rem 3rem;
+    margin-top: 5rem;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    background-color: black;
+}
+
+/* Game Container  */
+.game{
+    margin: 3rem;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    border-radius: 10px;
+    background-color: rgb(18, 149, 18);
+}
+.box{
+    background-color: limegreen;
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* Text Glowing Animation  */    
+@keyframes glow {
+    0%{
+        text-shadow: none;
+    }
+    25%{
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #0ff,
+            0 0 80px #0ff;     
+    }
+    50%{
+        text-shadow:
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #0ff,
+                0 0 80px #0ff,
+                0 0 90px #0ff,
+                0 0 100px #0ff,
+                0 0 150px #0ff;
+    }
+    75%{
+         text-shadow: 
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #0ff,
+                0 0 80px #0ff;
+    }
+    100%{
+        text-shadow: none;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 750px) {
+    h1{
+        font-size: 3.2rem;
+    }
+    .box{
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    .message{
+        font-size: 10vw;
+    }
+}
